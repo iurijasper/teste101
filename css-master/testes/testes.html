@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="site">
+        <div class="area header-grid-container"></div>
+        <div class="area menu-grid-container">
+            <div class="menu-grid-item menu-flex-container">
+                <a href="">Link 1</a>
+                <a href="">Link 2</a>
+                <a href="">Link 3</a>
+            </div>
+        </div>
+        <div class="area main-grid-container main-flex-container">
+            <div class="main-content">
+                <div class="busca-container">
+                    <div>Buscar:</div>
+                    <input type="tel" name="" id="pokemon_name">
+                </div>
+                <div class="pokedex">
+                    <div class="visor"></div>
+                    <div class="botoes"></div>
+                </div>
+            </div>
+        </div>
+        <div class="area footer-grid-container"></div>
+    </div>
+</body>
+
+</html>
+
+<style>
+    html,
+    body {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .area {
+        margin: 1px;
+        border: solid black 1px;
+    }
+
+    /* Grid layout para areas externas */
+    #site {
+        height: 100vh;
+        display: grid;
+        grid-template-columns: 20% 80%;
+        grid-template-rows: 15% 70% 15%;
+
+        grid-template-areas:
+            "header header"
+            "menu main"
+            "footer footer";
+    }
+
+    .header-grid-container {
+        grid-area: header;
+        background-color: rgb(61, 61, 61);
+    }
+
+    .menu-grid-container {
+        grid-area: menu;
+        background-color: rgb(61, 61, 61);
+    }
+
+    .main-grid-container {
+        grid-area: main;
+    }
+
+    .footer-grid-container {
+        grid-area: footer;
+        background-color: rgb(61, 61, 61);
+    }
+
+    /* Flexbox para posicionar coisas dentro das areas e mais níveis abaixo */
+
+    .main-flex-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        /* overflow: scroll; */
+    }
+
+    .main-content {
+        /* background-color: white; */
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        padding: 20px;
+        /* overflow: ; */
+    }
+
+    /* components */
+    #pokemon_name {
+        width: 100%;
+        height: 20px;
+    }
+
+    .busca-container {
+        display: flex;
+        flex-direction: column;
+        padding: 5px 20px 10px 10px;
+        border-radius: 20px;
+        background-color: white;
+        border: solid black 3px;
+    }
+
+    .pokedex {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+        background-color: red;
+        height: 180px;
+        width: 150px;
+        min-width: 120px;
+        border: solid black 3px;
+        border-radius: 10px;
+    }
+
+    .visor {
+        height: 60px;
+        width: 90px;
+        border-radius: 10px;
+        background-color: rgb(201, 230, 230);
+        margin-top: 20px;
+        border: solid white 10px;
+    }
+
+    /* Menu */
+    .menu-flex-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .menu-flex-container a {
+        color: white;
+    }
+</style>

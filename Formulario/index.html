@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Contato</title>
+</head>
+<body>
+<div>
+    <h1>
+        <img src="icone gmail">
+        Contato e Localizacao
+    </h1>
+</div>
+
+<hr>
+
+<div>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3454.4089882482494!2d-51.16653967304687!3d-30.025122299999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9519779ea66d9993%3A0x9477cb21ba5c4f62!2sIguatemi%20Porto%20Alegre!5e0!3m2!1spt-BR!2sbr!4v1663894382405!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+
+<div>
+    <p>Entre em contato conosco pelo email contato@auladehtml.com.br ou pelo formulario abaixo:</p>
+</div>
+
+<div>
+    <form action="https://api-dwi.herokuapp.com/api/examples" method="post">
+        <div>
+            <input placeholder="Informe seu nome" type="text" name="nome" id="">
+            <input placeholder="Informe seu email" type="text" name="email" id="">
+        </div>
+
+        <br>
+
+        <textarea name="mensagem" id="" cols="30" rows="10"></textarea>
+
+        <div>
+            <button type="submit">ENVIAR</button>
+        </div>
+    </form>
+</div>
+
+</body>
+</html>
